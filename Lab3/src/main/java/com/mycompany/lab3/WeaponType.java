@@ -11,8 +11,7 @@ package com.mycompany.lab3;
  */
    public enum WeaponType {
        
-        ////cum muncesc un pic si compilez sa vad a am facut corect?????
-       ///long espice dimond.....cel mai lung drum intr-un digraaf
+        
             Weapon1,  Weapon2,  Weapon3;
    
 }
