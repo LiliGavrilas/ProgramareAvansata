@@ -5,6 +5,7 @@
  */
 package com.mycompany.lab5;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,15 +14,15 @@ import java.util.Map;
  *
  * @author XPS 9530
  */
-public class Document {
+public class Document implements Serializable {
 
     private String id;
     private String name;
     private String location;
 
-    private Map tags = new HashMap<String, Tag>();
+    private Map tags = new HashMap<String, Object>();
 
-    Object getId() {
+    String getId() {
         return this.id;
 
     }
@@ -51,5 +52,18 @@ public class Document {
     public void setTags(Map tags) {
         this.tags = tags;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public Map getTags() {
+        return tags;
+    }
     
+    ///The application will signal invalid data (duplicate names, invalid paths or URLs, etc.) or invalid commands using custom exceptions.
 }

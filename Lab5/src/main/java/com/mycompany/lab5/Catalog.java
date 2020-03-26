@@ -5,6 +5,7 @@
  */
 package com.mycompany.lab5;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,9 +13,9 @@ import java.util.List;
  *
  * @author XPS 9530
  */
-public class Catalog {
+public class Catalog implements Serializable {
  private String name;
- private String path;
+ private String path;//calea catre catalog path sau URL
  private List<Document> documents = new ArrayList<>();
 
     public Catalog(String name, String path) {
@@ -24,6 +25,7 @@ public class Catalog {
 
     public Catalog(String name_) {
         name=name_;
+        this.path="./Default.txt";
     }
     
 
@@ -65,8 +67,8 @@ public class Catalog {
     documents.add(doc);
  }
  /*public Document findById(int id) {
-      return documents.get(id);
- }*/
+      return documents.get(id);////documents[id]
+ }*///documentul de pe pozitia  id
  
  
  public Document findById(String id) {
